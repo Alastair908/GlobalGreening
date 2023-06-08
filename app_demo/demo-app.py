@@ -17,7 +17,8 @@ import pandas as pd
 import numpy as np
 import pydeck as pdk
 import altair as alt
-MAPBOX_API_KEY = ''
+import os
+MAPBOX_API_KEY = st.secrets.mapbox.key
 
 # AWS Open Data Terrain Tiles
 TERRAIN_IMAGE = "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png"
@@ -28,8 +29,9 @@ ELEVATION_DECODER = {"rScaler": 256, "gScaler": 1, "bScaler": 1 / 256, "offset":
 SURFACE_IMAGE = f"https://api.mapbox.com/v4/mapbox.satellite/{{z}}/{{x}}/{{y}}@2x.png?access_token={MAPBOX_API_KEY}"
 
 chart_data = pd.DataFrame(
-   np.random.randn(1000, 2) / [10, 10] + [39.7302, -104.9903],
+   np.random.randn(10000, 2) / [10, 10] + [39.7302, -104.9903],
    columns=['lat', 'lon'])
+
 
 st.title('GlobalGreening')
 st.text(chart_data.shape)
@@ -47,7 +49,7 @@ st.pydeck_chart(pdk.Deck(
            'HexagonLayer',
            data=chart_data,
            get_position='[lon, lat]',
-           radius=200,
+           radius=1000,
            elevation_scale=4,
            elevation_range=[0, 1000],
            pickable=True,
