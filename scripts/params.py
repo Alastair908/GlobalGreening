@@ -2,7 +2,11 @@ import os
 
 ##################  VARIABLES  ##################
 DATA_SIZE=os.environ.get("DATA_SIZE")
-CHUNK_SIZE=os.environ.get("CHUNK_SIZE")
+LOAD_CHUNK_SIZE=os.environ.get("LOAD_CHUNK_SIZE")
+LAND_USE_ARRAY_SIZE=os.environ.get("LAND_USE_ARRAY_SIZE")
+TRIAL_SIZE=os.environ.get("TRIAL_SIZE")
+
+
 MODEL_TARGET=os.environ.get("MODEL_TARGET")
 
 # Your GCP project for GlobalGreening
