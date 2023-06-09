@@ -29,7 +29,7 @@ ELEVATION_DECODER = {"rScaler": 256, "gScaler": 1, "bScaler": 1 / 256, "offset":
 SURFACE_IMAGE = f"https://api.mapbox.com/v4/mapbox.satellite/{{z}}/{{x}}/{{y}}@2x.png?access_token={MAPBOX_API_KEY}"
 
 chart_data = pd.DataFrame(
-   np.random.randn(10000, 2) / [10, 10] + [39.7302, -104.9903],
+   np.random.randn(15000, 2) / [10, 10] + [39.7302, -104.9903],
    columns=['lat', 'lon'])
 
 
@@ -49,17 +49,18 @@ st.pydeck_chart(pdk.Deck(
            'HexagonLayer',
            data=chart_data,
            get_position='[lon, lat]',
-           radius=1000,
+           radius=300,
            elevation_scale=4,
            elevation_range=[0, 1000],
            pickable=True,
            extruded=True,
+           get_color='[0, 255, 0, 160]'
         ),
         pdk.Layer(
             'ScatterplotLayer',
             data=chart_data,
             get_position='[lon, lat]',
-            get_color='[200, 30, 0, 160]',
+            get_color='[0, 255, 0, 160]',
             get_radius=200,
         ),
         pdk.Layer(
