@@ -38,7 +38,7 @@ trial_size = TRIAL_SIZE
 
 # loading data
 images_dataset = load_images(dataset_root_folder, images_dir)
-masks_dataset = load_images(dataset_root_folder, masks_dir)
+masks_dataset = load_masks(dataset_root_folder, masks_dir)
 
 # Preparing X(images) and y(labels) - to be added to load images later
 y = encoding_masks(masks_dataset)

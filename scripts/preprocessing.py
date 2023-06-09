@@ -78,13 +78,13 @@ def prepare_labels(labels_dict, hex_colors_list):
     labels_dict_df = pd.DataFrame(labels_dict['classes'])
     
     for i in range(len(hex_colors_list)):
-    color = hex_colors_list[i].lstrip('#')
-    r = int(color[0:2],16)
-    g = int(color[2:4],16)
-    b = int(color[4:6],16)
-    labels_dict_df.at[i,'r'] = r
-    labels_dict_df.at[i,'g'] = g
-    labels_dict_df.at[i,'b'] = b
+        color = hex_colors_list[i].lstrip('#')
+        r = int(color[0:2],16)
+        g = int(color[2:4],16)
+        b = int(color[4:6],16)
+        labels_dict_df.at[i,'r'] = r
+        labels_dict_df.at[i,'g'] = g
+        labels_dict_df.at[i,'b'] = b
     
     return labels_dict_df
 
