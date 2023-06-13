@@ -1,0 +1,5 @@
+pandas
+numpy
+fastapi
+gcsfs==2023.5.0
+git+https://github.com/streamlit/files-connection
