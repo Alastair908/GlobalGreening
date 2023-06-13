@@ -2,7 +2,8 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+.csv
+.h5
 # C extensions
 *.so
 
@@ -174,4 +175,3 @@ cython_debug/
 jupyter.txt
 
 .streamlit/
-
