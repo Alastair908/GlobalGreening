@@ -37,8 +37,16 @@ def ndvi_mean(mask, image):
 
     np_image = np.array(image)
 
-    point = mask[:,:,0] * np_image
+    layered = mask[:,:,0] * np_image
 
-    mean =  point[np.nonzero(point)].mean()
+    mean =  layered[np.nonzero(layered)].mean()
 
     return mean
+
+def ndvi_mid_layer(mask, image):
+
+    np_image = np.array(image)
+
+    layered = mask[:,:,0] * np_image
+
+    return layered
