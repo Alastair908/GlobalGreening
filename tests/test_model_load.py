@@ -1,7 +1,7 @@
 import numpy as np  
 import os
 import ipdb
-from scripts.params import *
+from green.params import *
 from scripts import data
 
 dataset_root_folder = LOCAL_DATA_PATH
