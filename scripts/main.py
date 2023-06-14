@@ -7,7 +7,7 @@ import graphviz
 import matplotlib.pyplot as plt
 %matplotlib inline
 import os, random, cv2 # cv2 used for augmentation
-from scripts.params import *
+from green.params import *
 from scripts.data import *
 from scripts.model import *
 from scripts.preprocessing import *
