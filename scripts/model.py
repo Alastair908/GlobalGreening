@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from scripts.params import *
+from green.params import *
 
 import tensorflow as tf
 from tensorflow.keras import backend as K

@@ -4,7 +4,7 @@ import pandas as pd
 from PIL import Image
 import os
 import ipdb
-from scripts.params import *
+from green.params import *
 
 # key parameters to be used
 dataset_root_folder = LOCAL_DATA_PATH
