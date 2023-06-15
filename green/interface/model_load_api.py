@@ -1,12 +1,6 @@
 import numpy as np
 import pandas as pd
-# from PIL import Image
-# import matplotlib.pyplot as plt
-# %matplotlib inline
-# import os, random, cv2 
-# import tensorflow as tf
 from google.cloud import storage
-import requests
 from tensorflow.keras import backend as K
 from tensorflow.keras.applications import InceptionResNetV2
 from tensorflow.keras.layers import Input, Conv2D, BatchNormalization, Activation, Conv2DTranspose, Concatenate, ZeroPadding2D, Dropout
@@ -32,8 +26,8 @@ def load_model():
     # bucket = client.bucket(BUCKET_NAME)
     # model_path = bucket.blob(storage_filename)
 
-   #  /Users/Alenka/code/Alastair908/GlobalGreening/green/api/20230611-082522_InceptionResNetV2-UNet.h5
-    model_path = "20230611-082522_InceptionResNetV2-UNet.h5"
+   #  /Users/Alenka/code/Ala    stair908/GlobalGreening/green/api/20230611-082522_InceptionResNetV2-UNet.h5
+    model_path = "green/api/20230611-082522_InceptionResNetV2-UNet.h5"
     # breakpoint()
     model.load_weights(model_path)
     return model
