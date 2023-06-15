@@ -4,6 +4,34 @@ import requests
 import os
 import json
 
+CSS = """
+.stApp {
+    background-image: url("https://images.unsplash.com/photo-1568832359672-e36cf5d74f54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8OHx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80");
+    background-size: cover;
+}
+"""
+st.write(f'<style>{CSS}</style>', unsafe_allow_html=True)
+
+st.markdown(
+    """
+    <style>
+    .sidebar .sidebar-content {
+        background-image: url("https://images.unsplash.com/photo-1568832359672-e36cf5d74f54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8OHx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80");
+        background-size: cover;
+        background-position: center;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+st.sidebar.write("Yan panel içeriği")
+
+st.markdown("<h1 style='text-align: center; font-family:EB Garamond; color: white; font-size: 120px;'>Global Greening🌿 </h1>", unsafe_allow_html=True)
+
+st.sidebar.success("PROJECT: Global Greening 🤖 ")
+
+
 # Set page tab display
 st.set_page_config(
    page_title="Simple Image Uploader",
@@ -61,9 +89,7 @@ if img_file_buffer is not None:
         ### Display the image returned by the API
         #st.markdown("code 200")
         response_data = json.loads(res.content)
-        response_array = np.array(response_data['predicted_layer'])
-        layers = response_array[:,:,0]
-
+        nested_list = response_data['predicted_layer']
         st.write("Nested List:")
         st.write(nested_list)
         
