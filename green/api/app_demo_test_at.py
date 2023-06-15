@@ -52,7 +52,8 @@ def live_demo():
     # layout="wide",
     # initial_sidebar_state="expanded",
     # )
-    url = 'http://localhost:8000'
+    # url = 'http://localhost:8000'
+    url = "https://greenamd-3b6qake7za-ew.a.run.app/"
     
     st.header('Location analysis')
     
@@ -104,9 +105,6 @@ def live_demo():
           else:
             st.markdown("**Oops**, something went wrong 😓 Please try again.")
             print(res.status_code, res.content)
-
-
-
 
 
 
