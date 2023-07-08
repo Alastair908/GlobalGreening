@@ -18,9 +18,6 @@ To train the model, we used Sentinal 2 satellite images and ESA world cover land
 
 The mask is then applied to May/June NDVI data for those predicted areas over multiple years. Using a starting point of 2002 the results can then be compared to see how levels of vegatation have changed during the greenest times of the year.
 
-### Flowchart
-
-
 ## Results
 Our findings indicate a general increase in wild flora for the state of Colorado from 2002 to 2010. However, this growth has not been sustained through the decade with a clear drop in the density of vegetation post 2010. By 2022, the NDVI data shows a slightly higher rate of vegetation compared to 2002.
 
